@@ -1,0 +1,5 @@
+1. Zwraca Fals ponieważ obiekty przylegajace krawedziami nie przynikaja na wylot.
+2. Zmienna trafiony to numer indeksu. Jeśli zostanie trafiony zerowy przeciwnik na liście (0), to konstrukcja if trafiony: uzna że warunek nie został spełniony (Fałsz). Należy pisać if trafiony != -1:.
+3. Przesuwając postać tylko w jednej osi za każdym razem, zawsze wiemy, z jakiego wektora ruchu weszliśmy w ścianę, dzięki czemu możemy zresetować dokładnie tę pojedynczą kolidującą krawędź postaci względem ściany.
+4. Pocisk pokonuje 15 pikseli w jednej klatce (900 px/s / 60 klatek). Ściana musi mieć minimum 16 pikseli grubości, by jej nie przeskoczył.
+5. Pętla w Pythonie utrzyma swój krok po usunięciu elementu, przez co przeskoczy sprawdzanie kolejnego elementu na liście, który wskoczył na właśnie usunięte miejsce. Gracz odbierze to jako niedziałające zbieranie danej monety i błąd logiki uderzeń.
